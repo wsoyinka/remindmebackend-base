@@ -1,5 +1,7 @@
 FROM ubuntu:xenial
-MAINTAINER wale soyinka <wsoyinka@gmail.com>
+LABEL maintainer="wale soyinka <wsoyinka@gmail.com>"
+
+#MAINTAINER wale soyinka <wsoyinka@gmail.com>
 
 ENV TERM=xterm-256color
 
@@ -20,4 +22,4 @@ ADD scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
   
-LABEL application=todobackend 
+LABEL application=remindmebackend
